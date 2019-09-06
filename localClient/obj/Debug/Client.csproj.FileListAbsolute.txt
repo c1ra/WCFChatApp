@@ -13,3 +13,7 @@ C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\Client.csproj.Genera
 C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\localClient.exe
 C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\localClient.pdb
+C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\Home.g.cs
+C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\LogInPage.g.cs
+C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\Home.baml
+C:\Users\cira\source\repos\WCFChatApp\localClient\obj\Debug\LogInPage.baml

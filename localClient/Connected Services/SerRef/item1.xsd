@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFChatApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFChatApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:complexType name="Client">
     <xs:sequence>
@@ -28,29 +28,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Group" nillable="true" type="tns:Group" />
-  <xs:complexType name="ArrayOfMessage">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfMessage" nillable="true" type="tns:ArrayOfMessage" />
   <xs:complexType name="ArrayOfGroup">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfGroup" nillable="true" type="tns:ArrayOfGroup" />
-  <xs:complexType name="ArrayOfGroupClient">
+  <xs:complexType name="ArrayOfClient">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupClient" nillable="true" type="tns:GroupClient" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Client" nillable="true" type="tns:Client" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfGroupClient" nillable="true" type="tns:ArrayOfGroupClient" />
-  <xs:complexType name="GroupClient">
+  <xs:element name="ArrayOfClient" nillable="true" type="tns:ArrayOfClient" />
+  <xs:complexType name="ArrayOfMessage">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Id_C" type="xs:int" />
-      <xs:element minOccurs="0" name="Id_G" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="GroupClient" nillable="true" type="tns:GroupClient" />
+  <xs:element name="ArrayOfMessage" nillable="true" type="tns:ArrayOfMessage" />
 </xs:schema>

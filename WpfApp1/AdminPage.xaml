@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp1"
       mc:Ignorable="d"
-      Title="AdminPage" Height="493.316" Width="691.711">
+      Title="AdminPage" Height="493.316" Width="691.711" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -32,8 +32,8 @@
         <!--ROW1-->
         <Label Grid.Column="1" Grid.Row="1" Content="usrId: " />
         <TextBox Grid.Column="2" Grid.Row="1" Name="usrIDTextBox" Width="120" MinHeight="26" Margin="0 0 0 12"/>
-        <ListBox Grid.Column="3" Grid.Row="1" Grid.RowSpan="5" MinWidth="200"  Name="ClientsListBox" Margin="12 0 0 12"></ListBox>
-        <ListBox Grid.Column="4" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" MinWidth="200"  Name="ClientGroupListBox" Margin="12 0 0 12"></ListBox>
+        <ListBox Grid.Column="3" Grid.Row="1" Grid.RowSpan="5" MinWidth="200"  Name="ClientsListBox" Margin="12 0 0 12" SelectionChanged="ClientsListBox_SelectionChanged"></ListBox>
+        <ListBox Grid.Column="4" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" MinWidth="200"  Name="ClientGroupListBox" Margin="12 0 0 12" SelectionChanged="ClientGroupListBox_SelectionChanged"></ListBox>
 
         <!--Row2-->
         <Label Grid.Column="1" Grid.Row="2" Content="usrName: " />
@@ -50,10 +50,11 @@
         <Label Grid.Column="4" Grid.Row="5"  Content="usrId" Name="usrIdLabel" Width="36" ></Label>
         <Label Grid.Column="5" Grid.Row="5"  Content="gId" Name="gId" Width="36" ></Label>
         <!--Row6-->
-        <Button Grid.Column="1" Grid.Row="6"  Content="EditUser" Name="EditUserButton" ></Button>
-        <Button Grid.Column="2" Grid.Row="6"  Content="CreateUser" Name="CreateUserButton" ></Button>
-        <Button Grid.Column="4" Grid.Row="6"  Content="ApproveGR" Name="ApproveGRButton" ></Button>
-        <Button Grid.Column="5" Grid.Row="6"  Content="DenyGR" Name="DenyGRButton" ></Button>
+        <Button Grid.Column="1" Grid.Row="6"  Content="EditUser" Name="EditUserButton" Click="EditUserButton_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="6"  Content="CreateUser" Name="CreateUserButton" Click="CreateUserButton_Click" ></Button>
+        <Button Grid.Column="4" Grid.Row="6"  Content="ApproveGR" Name="ApproveGRButton" Click="ApproveGRButton_Click" ></Button>
+        <Button Grid.Column="5" Grid.Row="6"  Content="DenyGR" Name="DenyGRButton" Click="DenyGRButton_Click"></Button>
+        <Label Grid.Column="3" Grid.Row="6" Content=" " Name="messageLabel" />
 
     </Grid>
 </Page>

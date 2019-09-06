@@ -18,11 +18,20 @@ namespace localClient
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : NavigationWindow
     {
+        TheController theController = TheController.Instance();
         public MainWindow()
         {
             InitializeComponent();
+            LogInPage LogIn = new LogInPage();
+            this.Navigate(LogIn);
+
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            theController.Disconnect();
         }
     }
 }

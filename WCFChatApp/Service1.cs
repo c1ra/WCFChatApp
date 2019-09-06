@@ -166,7 +166,7 @@ namespace WCFChatApp
             {
                 lock (syncObj)
                 {
-                    tmpId =+ clientList.Last().Id_C;
+                    tmpId += clientList.Last().Id_C;
                     usr.Id_C = tmpId;
                     clientList.Add(usr);
                 }
@@ -178,31 +178,32 @@ namespace WCFChatApp
         {
             bool tmp = false;
 
-            foreach (Client c in clientList) {
-                if((c.UsrName == usr.UsrName ) | (c.Id_C == usr.Id_C))
+
+            for (int i = 0; i < clientList.Count; i++)
+            {
+                if (clientList[i].Id_C == usr.Id_C)
                 {
                     lock (syncObj)
                     {
                         if (!string.IsNullOrEmpty(usr.UsrName))
                         {
-                            c.UsrName = usr.UsrName;
+                            clientList[i].UsrName = usr.UsrName;
                         }
                         if (!string.IsNullOrEmpty(usr.Nadimak))
                         {
-                            c.Nadimak = usr.Nadimak;
+                            clientList[i].Nadimak = usr.Nadimak;
                         }
                         if (!string.IsNullOrEmpty(usr.Pass))
                         {
-                            c.Pass = usr.Pass;
+                            clientList[i].Pass = usr.Pass;
                         }
                         if (!string.IsNullOrEmpty(usr.Type))
                         {
-                            c.Type = usr.Type;
+                            clientList[i].Type = usr.Type;
                         }
                     }
                     tmp = true;
                 }
-               
             }
             return tmp;
         }

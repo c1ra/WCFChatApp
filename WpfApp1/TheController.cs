@@ -169,7 +169,7 @@ namespace WpfApp1
         }
 
 
-        public async Task CreateUsr(string usrName, string pass, string nick, string type)
+        public async Task<bool> CreateUsr(string usrName, string pass, string nick, string type)
         {
             Client c = new Client();
             if (nick != "")
@@ -181,23 +181,20 @@ namespace WpfApp1
             if (nick != "")
                 c.Type = type;
 
-            await proxy.CreateUserAsync(c);
+            return await proxy.CreateUserAsync(c);
         }
 
 
-        public async Task EditUsr(string usrName, string pass, string nick, string type)
+        public async Task<bool> EditUsr(int id, string usrName, string pass, string nick, string type)
         {
             Client c = new Client();
-            if (nick != "")
-                c.Nadimak = nick;
-            if (usrName != "")
-                c.UsrName = usrName;
-            if (pass != "")
-                c.Pass = pass;
-            if (nick != "")
-                c.Type = type;
+            c.Id_C = id;
+            c.Nadimak = nick;
+            c.UsrName = usrName;
+            c.Pass = pass;
+            c.Type = type;
+            return await proxy.EditUserAsync(c);
 
-            await proxy.EditUserAsync(c);
         }
 
 

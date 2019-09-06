@@ -24,9 +24,7 @@ namespace WpfApp1
 
         TheController theController = TheController.Instance();
         int reciever;
-        private void SendButton_Click()
-        {
-        }
+        
         public AdminHome()
         {
 
@@ -126,6 +124,12 @@ namespace WpfApp1
             string msgText = ChatInputTextBox.Text;
 
             await theController.SendMsg(msgText, reciever);
+        }
+
+        private void AdminPageBtnClicked(object sender, RoutedEventArgs e)
+        {
+            AdminPage  adminPage = new AdminPage();
+            NavigationService.Navigate(adminPage);
         }
     }
 }
