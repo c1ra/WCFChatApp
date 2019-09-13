@@ -11,7 +11,7 @@ namespace Host
     {
         static void Main(string[] args)
         {
-            ServiceHost serviceHost = new ServiceHost(typeof(WCFChatApp.Service1));
+            ServiceHost serviceHost = new ServiceHost(typeof(Service1));
             serviceHost.Open();
             Console.WriteLine("Service Started");
             Console.WriteLine("Press <Enter> to terminate.\n\n");
