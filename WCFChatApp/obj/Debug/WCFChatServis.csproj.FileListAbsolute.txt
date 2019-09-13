@@ -1,0 +1,7 @@
+C:\Users\cira\source\repos\WCFChatApp\WCFChatApp\bin\Debug\WCFChatApp.dll.config
+C:\Users\cira\source\repos\WCFChatApp\WCFChatApp\bin\Debug\WCFChatApp.dll
+C:\Users\cira\source\repos\WCFChatApp\WCFChatApp\bin\Debug\WCFChatApp.pdb
+C:\Users\cira\source\repos\WCFChatApp\WCFChatApp\obj\Debug\WCFChatServis.csproj.CoreCompileInputs.cache
+C:\Users\cira\source\repos\WCFChatApp\WCFChatApp\obj\Debug\WCFChatApp.dll
+C:\Users\cira\source\repos\WCFChatApp\WCFChatApp\obj\Debug\WCFChatApp.pdb
+C:\Users\cira\source\repos\WCFChatApp\WCFChatApp\obj\Debug\WCFChatServis.csprojAssemblyReference.cache
